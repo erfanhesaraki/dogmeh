@@ -1,16 +1,10 @@
-@font-face {
-    font-family:YekanBakhFaNum ;
-    src: url(../fonts/YekanBakhFaNum-Light.woff);
-}
 
 *{
-margin: 0 !important;
-padding: 0 !important;
-box-sizing: border-box !important;
-font-family: YekanBakhFaNum;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
 }
-
-
 :root{
     /* Element colors */
     --mc1: #1CA6AB;
@@ -68,13 +62,8 @@ margin-bottom: 32px;
 
 
 
-@font-face {
-    font-family:"myfirstfont";
-    src: url(../fonts/YekanBakhFaNum-Bold.woff);
-}
 
-h1{
-    /* font-family:myfirstfont ; */
-}
+
+
 
 
