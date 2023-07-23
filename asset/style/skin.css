@@ -1,0 +1,80 @@
+@font-face {
+    font-family:YekanBakhFaNum ;
+    src: url(../fonts/YekanBakhFaNum-Light.woff);
+}
+
+*{
+margin: 0 !important;
+padding: 0 !important;
+box-sizing: border-box !important;
+font-family: YekanBakhFaNum;
+}
+
+
+:root{
+    /* Element colors */
+    --mc1: #1CA6AB;
+    --mc2: #616161;
+    --mc3: #F6F6F6;
+    --mc4: #E6F4F1;
+/* Text colors  */
+
+--tc1: #616161;
+--tc2: #1CA6AB;
+--tc3: #005C6D;
+/*Border Radiuses  */
+
+--border-radius: 8;
+--border-radius-sm: 16;
+
+/* Font Sizes */
+
+
+--fz-xs :12;
+--fz-sm :14;
+--fz-md :16;
+--fz-lg :18;
+--fz-xl : 32;
+--fz-xxl: 40;
+/* Line Height */
+
+--lh-xs :  Auto;
+--lh-sm : auto / 32;
+--lh-md : auto ;
+--lh-xl : auto;
+--lh-xxl: 64;
+
+/* Button Padding */
+--brd-pri:7px * 30px;
+--brd-sec:4px * 8px;
+
+
+/* icon size & width & height & color */
+
+--icon-w__small:width: 24px; height: 24px;
+--icon-w__large:width: 32px; height: 32px;
+--icon-color__blue:#1CA6AB;
+--icon-color__gray:#616161;
+}
+
+
+.mainSpace{
+    margin-top: 80px;
+}
+
+.titleSpace{
+margin-bottom: 32px;
+}
+
+
+
+@font-face {
+    font-family:"myfirstfont";
+    src: url(../fonts/YekanBakhFaNum-Bold.woff);
+}
+
+h1{
+    /* font-family:myfirstfont ; */
+}
+
+
