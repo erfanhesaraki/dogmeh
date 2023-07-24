@@ -1,4 +1,4 @@
-@charset 'UTF-8';
+
 /* Slider */
 .slick-loading .slick-list
 {
@@ -8,6 +8,20 @@
 
 
 /* Arrows */
+
+
+
+.main__Slider .slick-prev{
+    top: 80%;
+}
+.main__Slider .slick-next{
+    top: 80%;
+}
+.home__Product_List  .slick-prev,
+.slick-next{
+    top: 55%;
+}
+
 .slick-prev,
 .slick-next
 {
@@ -15,7 +29,6 @@
     font-size: 0;
     line-height: 0;
     position: absolute;
-    top: 80%;
     display: block;
     width: 20px;
     height: 20px;
