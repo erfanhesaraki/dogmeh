@@ -1,4 +1,14 @@
 $(document).ready(function () {
+
+  $(".header__button__inner").hover(
+    function () {
+      $(".header__button__out").removeClass("hidden");
+    },
+    function () {
+      $(".header__button__out").addClass("hidden");
+    }
+  );
+
   $(".main__Slider").slick({
     dots: false,
     infinite: true,
