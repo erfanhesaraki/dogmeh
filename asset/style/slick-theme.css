@@ -11,12 +11,7 @@
 
 
 
-.main__Slider .slick-prev{
-    top: 80%;
-}
-.main__Slider .slick-next{
-    top: 80%;
-}
+
 .home__Product_List  .slick-prev,
 .slick-next{
     top: 45%;
@@ -70,10 +65,8 @@
     font-family: 'slick';
     font-size: 20px;
     line-height: 1;
-
     opacity: .75;
     color: white;
-
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -81,11 +74,6 @@
 .slick-prev{
     left: -25px;
 }
-
-
-
-
-
 
 [dir='rtl'] .slick-prev
 {
@@ -95,10 +83,12 @@
 .slick-prev:before
 {
     content: '←';
+
 }
 [dir='rtl'] .slick-prev:before
 {
     content: '→';
+
 }
 
 .slick-next
@@ -156,15 +146,11 @@
 {
     font-size: 0;
     line-height: 0;
-
     display: block;
-
     width: 20px;
     height: 20px;
     padding: 5px;
-
     cursor: pointer;
-
     color: transparent;
     border: 0;
     outline: none;
@@ -184,20 +170,15 @@
 {
     font-size: 6px;
     line-height: 20px;
-
     position: absolute;
     top: 0;
     left: 0;
-
     width: 20px;
     height: 20px;
-
     content: '•';
     text-align: center;
-
     opacity: .25;
     color: black;
-
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
