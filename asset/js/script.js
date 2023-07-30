@@ -1,32 +1,33 @@
 $(document).ready(function () {
 
-  $(".header__button__inner").hover(
-    function () {
-      $(".header__button__out").removeClass("hidden");
-    },
-    function () {
-      $(".header__button__out").addClass("hidden");
-    }
-  );
+
+    if($(window).width() < 768) {
+       $(".main__Section-7__Item1").addClass("ProductWarranty");
+     
+    }    
+
+
 
   $(".main__Slider").slick({
     dots: true,
     infinite: true,
-    speed: 3000,
+    speed: 500,
     autoplaySpeed:3000 ,
     slidesToShow: 1,
     adaptiveHeight: true,
     fade: true,
     appendArrows:".append__Slider_Arrow",
-    appendDots:".append__Slider_Arrow",
+    appendDots:".append__Slider_Dot",
     arrow:true,
   });
 
   $(".home__Product_List").slick({
     dots: false,
     infinite: true,
-    speed: 3000,
+    adaptiveHeight: true,
+    speed: 500,
     autoplaySpeed:500 ,
+    // appendArrows:".append__Slider_Arrow__section-2",
     slidesToShow: 4,
     slidesToScroll: 4,
     arrow:true,
@@ -86,4 +87,16 @@ $(document).ready(function () {
       },
     ],
   });
+
+  $('.ProductWarranty').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true
+  });
+
+
+
+
 });
