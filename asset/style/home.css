@@ -85,8 +85,6 @@ header {
   height: 80px;
 }
 
-
-
 /* icons svg/ */
 
 /* start header  */
@@ -162,7 +160,7 @@ header {
   background-color: #ffffff;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.252);
   z-index: 1 !important;
-  right: -14px;
+  right: 2px;
   top: 60px;
   visibility: hidden;
   opacity: 0;
@@ -200,6 +198,18 @@ header {
 /* start main  */
 /* start slider  */
 /* section-1 */
+
+
+/* ----------------------------------------------------------- */
+/*                            Main                            */
+/* ----------------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------------- */
+/*                            start section 1                 */
+/* ----------------------------------------------------------- */
+
 
 .main__Section-1 {
   position: relative;
@@ -338,7 +348,9 @@ header {
 .main__Section-1 .slick-prev {
   background-color: transparent !important;
 }
-/* slick dots */
+.append__Slider_Dot{
+  display: flex;
+}
 .slick-dots {
   display: flex;
   align-items: end;
@@ -374,7 +386,10 @@ header {
   width: 8px;
   height: 2px;
 }
+
+/* *************************************** slick dots ****************/
 .append__Slider_Controls {
+
   position: absolute;
   top: 80%;
   right: 10%;
@@ -387,7 +402,7 @@ header {
 /* slick start */
 
 .slick-next {
-  top: 50%;
+  top: 45%;
   right: 5px;
 }
 
@@ -411,8 +426,9 @@ header {
 .slick-next:hover:before {
   background-color: var(--mc1);
 }
+
 .slick-prev {
-  top: 50%;
+  top: 45%;
   left: 5px;
 }
 
@@ -453,13 +469,11 @@ header {
   background-color: var(--mc1);
 }
 /* 
-.home__Plugins_List .slick-prev {
-  left:303px ;
-}  */
 
-.home__Plugins_List .slick-next {
-  right: 25px;
-}
+
+ /* ----------------------------------------------------------- */
+/*                       start section 2          */
+/* ----------------------------------------------------------- */
 
 /* slick  end */
 
@@ -583,6 +597,10 @@ header {
 
 /* start main__Section-3 */
 
+/* ----------------------------------------------------------- */
+/*                       start section 3         */
+/* ----------------------------------------------------------- */
+
 .plugins__Item_1 figure {
   border-radius: 16px;
 }
@@ -648,6 +666,20 @@ header {
 /* end main__Section-3 */
 
 /* start main__Section-4 */
+
+/* ----------------------------------------------------------- */
+/*                       start section 4          */
+/* ----------------------------------------------------------- */
+
+
+.home__Plugins_List .slick-prev {
+  left:30px ;
+}
+
+
+.home__Plugins_List .slick-next {
+  right:29px ;
+}
 
 .main__Section-4 {
   margin-top: -100px;
@@ -727,17 +759,22 @@ header {
   margin: 0px 0px 0px 10px;
 }
 
-/* end main__Section-3 */
+/* ----------------------------------------------------------- */
+/*                       start section 6          */
+/* ----------------------------------------------------------- */
 
 /* start main__Section-6 */
 
 .main__Section-6__Item figure {
   border-radius: 16px;
 }
+
 .main__Section-6__Item figure img {
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
+  padding: 0;
 }
+
 .main__Section-6__Item figure figcaption {
   display: flex;
   flex-direction: column;
@@ -767,10 +804,15 @@ header {
 }
 
 /* end main__Section-6 */
+/* ----------------------------------------------------------- */
+/*                       start section 7           */
+/* ----------------------------------------------------------- */
+
 /* start  main__Section-7 */
 
 .main__Section-7 {
   padding-bottom: 80px;
+
 }
 
 .main__Section-7__Item1 div {
@@ -799,10 +841,15 @@ header {
 
 /* end main */
 
+/* ----------------------------------------------------------- */
+/*                       Footer           */
+/* ----------------------------------------------------------- */
+
 /* start footer */
 
 .footer__Section-1 {
   position: relative;
+  height: 70px;
 }
 
 .footer__Section-1 figure img {
@@ -828,6 +875,7 @@ header {
   border-radius: 100%;
   background-color: #eeeeee;
   transition: 0.5s;
+cursor: pointer;
 }
 .footer__Section-2__BoxIcon:hover {
   background-color: #e6f4f1;
@@ -840,6 +888,7 @@ header {
 .footer__Section-3 {
   border-top: 1px solid #b1b1b1;
   margin-top: 20px;
+  height: 130px;
 }
 
 .footer__Section-3 li {
@@ -852,6 +901,13 @@ header {
   width: 65px;
   height: 25px;
   transition: 0.5s;
+  cursor: pointer;
+  padding-left: 2px;
+
+}
+
+.footer__Section-3 li:not(li:last-child){
+  border-right: 1px dashed  var(--mc2);
 }
 
 .footer__Section-3 li:hover {
@@ -859,6 +915,10 @@ header {
 }
 
 /* end footer */
+
+/* ----------------------------------------------------------- */
+/*                     BTNS         */
+/* ----------------------------------------------------------- */
 
 .btns {
   width: 165px;
@@ -898,67 +958,85 @@ header {
 /* ----------------------------------------------------------- */
 
 .control__Panel_Wrapper {
-  width: 98%;
   position: fixed;
-  bottom: 5px;
-  left: 1%;
-  filter: 7px 7px 15px rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(2px);
+  bottom: 1px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 101;
-  /* transition:5s; */
+  display: flex;
   border-radius: 10px;
-}
-.bottomCircle {
-  background-color: inherit;
+
 }
 
-.bottomCircle div{
+.search__ShadowBox {
+  width: calc(50% - 65px);
   background-color: white;
+  border-top-left-radius: 10px;
+}
+.bottomCircle {
   width: 130px;
-  height: 100%; 
-  clip-path: path('M65 62C98.1371 62 125 35.1371 125 2C125 1.33072 124.989 0.663994 124.967 0H130V80H0V0H5.03271C5.01096 0.663994 5 1.33072 5 2C5 35.1371 31.8629 62 65 62Z');
-  -webkit-clip-path: path('M65 62C98.1371 62 125 35.1371 125 2C125 1.33072 124.989 0.663994 124.967 0H130V80H0V0H5.03271C5.01096 0.663994 5 1.33072 5 2C5 35.1371 31.8629 62 65 62Z');
+  position: relative;
+  backdrop-filter: blur(2px);
+}
+.phone__CtgBtn {
+  width: calc(50% - 64px);
+  background-color: white;
+  border-top-right-radius: 10px;
+}
+
+.bottomCircle div:nth-of-type(1) {
+  background-color: white;
+  height: 100%;
+  width: 130px;
+  clip-path: path(
+    "M65 62C98.1371 62 125 35.1371 125 2C125 1.33072 124.989 0.663994 124.967 0H130V80H0V0H5.03271C5.01096 0.663994 5 1.33072 5 2C5 35.1371 31.8629 62 65 62Z"
+  );
+  -webkit-clip-path: path(
+    "M65 62C98.1371 62 125 35.1371 125 2C125 1.33072 124.989 0.663994 124.967 0H130V80H0V0H5.03271C5.01096 0.663994 5 1.33072 5 2C5 35.1371 31.8629 62 65 62Z"
+  );
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
 }
 
-
-.search__ShadowBox span:nth-of-type(1) {
-  color: var(--tc1);
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.phone__CtgBtn span:nth-of-type(1) {
-  color: var(--tc1);
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-
-
-
-.control__Basket{
+.control__Basket {
   width: 100px;
   height: 100px;
   background-color: white;
-  position: absolute;
+  border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  position: absolute;
+  bottom: 10px;
+  left: calc(50% - 50px);
 }
-
-
+.control__Basket a {
+  position: relative;
+}
+.control__Basket a span:nth-of-type(2) {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: var(--mc1);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -5px;
+  right: -13px;
+  color: white;
+}
 
 /* ----------------------------------------------------------- */
 /*                           media                             */
 /* ----------------------------------------------------------- */
 
 @media only screen and (max-width: 768px) {
+  .append__Slider_Controls {
+    right: 19%;
+  }
   .plugins__Item_2 div:nth-of-type(2) {
     width: 80%;
     text-align: center;
@@ -1085,6 +1163,16 @@ header {
   }
 }
 @media only screen and (max-width: 992px) {
+
+  .plugins__Item_2 div:nth-of-type(2){
+    width: 100%;
+  }
+
+  .plugins__Item_2 div:nth-of-type(3){
+    margin-bottom: 80px;
+  }
+
+
   .Wbicon__size-6 {
     min-width: 20px;
     width: 20px;
