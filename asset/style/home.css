@@ -153,29 +153,154 @@ header {
   opacity: 0;
 }
 .header__button__out {
-  width: 507px;
+  min-width: 700px;
   height: 230px;
+  min-height: 230px;
   flex-shrink: 0;
   border-radius: 0px 0px 16px 16px;
-  background-color: #ffffff;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.252);
   z-index: 1 !important;
   right: 2px;
-  top: 60px;
+  top: 70px;
+  padding: 1.5rem;
   visibility: hidden;
   opacity: 0;
+  transition:.5s;
 }
 
 /* hover button */
 .header__Categories:hover .header__button__out {
   visibility: visible;
   opacity: 1;
+  transform: translateY(-10px);
+  background-color: #ffffff;
 }
 
 .header__Categories:hover .header__button__inner::before {
   visibility: visible;
   opacity: 1;
 }
+
+.SCat-Main {
+  border-left:solid 1px #B2B2B2;
+  width: 30%;
+  height: 100%;
+  flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+ 
+}
+.SCat-Main__Li {
+  text-align: end;
+  line-height: 40px;
+  width:100%;
+}
+.SCat-Main li a{
+color: #838383;
+font-weight: 600;
+position: relative;
+transition:.5s;
+text-decoration: none;
+
+}
+
+.SCat-Main__Li .SCat-Main__Li__a::before{
+  content: '\f053 ';
+  font-family: 'FontAwesome';
+  font-weight: bold;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 176px; 
+
+}
+.SCat-Main li :hover{
+  color: var(--mc1);
+  
+}
+.category__Title{
+  position: absolute;
+  width: calc(70% - 1rem);
+  height:2rem;
+ left: 0;
+ top:1rem;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding:0px 5px 0px 30px;
+ visibility: hidden;
+ opacity: 0;
+}
+.category__Title span:nth-of-type(1)
+{
+  color: #242424;
+  font-size: 12px;
+  font-weight: 600;
+}
+.category__Title div:nth-of-type(1) span:nth-of-type(2)
+{
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 17px;
+  text-align: left;
+  color: var(--mc1);
+  cursor: pointer;
+  
+}
+.category__Title div:nth-of-type(1) span:nth-of-type(1)
+{
+  color: var(--mc1);
+
+}
+.category__Title::before{
+  content: " ";
+  width: 93%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  border-bottom:solid 1px #B2B2B2;
+}
+
+.SCat-Main-subMenu{
+  position: absolute;
+  width: calc(70% - 0.5rem);
+  height:calc(78% - 2rem);
+  top: 57px;
+  left: 0px;
+  padding:0px 5px 0px 30px;
+  display: flex; 
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  visibility: hidden;
+  opacity:0;
+  
+}
+.SCat-Main-subMenu li{
+  direction: rtl;
+}
+.SCat-Main-subMenu li a::before {
+  content: "•";
+  width: 3px ;
+  height: 3px;
+
+}
+
+/*header category show and hide class*/
+
+.SCat-Main__Li.show .category__Title {
+  visibility: visible;
+  opacity: 1;
+}
+
+.SCat-Main__Li.show   .SCat-Main-subMenu{
+  visibility: visible;
+  opacity: 1;
+} 
+
+
+
+
 
 /* *******************buttonheader */
 .main__Slider__Item {
@@ -199,17 +324,13 @@ header {
 /* start slider  */
 /* section-1 */
 
-
 /* ----------------------------------------------------------- */
 /*                            Main                            */
 /* ----------------------------------------------------------- */
 
-
-
 /* ----------------------------------------------------------- */
 /*                            start section 1                 */
 /* ----------------------------------------------------------- */
-
 
 .main__Section-1 {
   position: relative;
@@ -348,7 +469,7 @@ header {
 .main__Section-1 .slick-prev {
   background-color: transparent !important;
 }
-.append__Slider_Dot{
+.append__Slider_Dot {
   display: flex;
 }
 .slick-dots {
@@ -389,7 +510,6 @@ header {
 
 /* *************************************** slick dots ****************/
 .append__Slider_Controls {
-
   position: absolute;
   top: 80%;
   right: 10%;
@@ -671,14 +791,12 @@ header {
 /*                       start section 4          */
 /* ----------------------------------------------------------- */
 
-
 .home__Plugins_List .slick-prev {
-  left:30px ;
+  left: 30px;
 }
 
-
 .home__Plugins_List .slick-next {
-  right:29px ;
+  right: 29px;
 }
 
 .main__Section-4 {
@@ -812,7 +930,6 @@ header {
 
 .main__Section-7 {
   padding-bottom: 80px;
-
 }
 
 .main__Section-7__Item1 div {
@@ -875,7 +992,7 @@ header {
   border-radius: 100%;
   background-color: #eeeeee;
   transition: 0.5s;
-cursor: pointer;
+  cursor: pointer;
 }
 .footer__Section-2__BoxIcon:hover {
   background-color: #e6f4f1;
@@ -893,7 +1010,7 @@ cursor: pointer;
 
 .footer__Section-3 li {
   list-style-type: none;
-  color: rgba(5, 5, 5, 0.95);
+  color: var(--tc1);
   font-size: 12px;
   font-style: normal;
   font-weight: 700;
@@ -903,11 +1020,10 @@ cursor: pointer;
   transition: 0.5s;
   cursor: pointer;
   padding-left: 2px;
-
 }
 
-.footer__Section-3 li:not(li:last-child){
-  border-right: 1px dashed  var(--mc2);
+.footer__Section-3 li:not(li:last-child) {
+  border-right: 1px dashed var(--mc2);
 }
 
 .footer__Section-3 li:hover {
@@ -965,7 +1081,6 @@ cursor: pointer;
   z-index: 101;
   display: flex;
   border-radius: 10px;
-
 }
 
 .search__ShadowBox {
@@ -1028,6 +1143,74 @@ cursor: pointer;
   right: -13px;
   color: white;
 }
+
+
+
+
+/* ----------------------------------------------------------- */
+/*                  main__ShadowBox                           */
+/* ----------------------------------------------------------- */
+
+.main__ShadowBox{
+  width:130%;
+  height: 120%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 998;
+  background-color:rgba(0, 0, 0, 0.8) ;
+  display: none;
+}
+.mainMenu{
+  display: none;
+  min-width:280px;
+  width: 320px;
+  height:120%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  background-color: white;
+  overflow-y: scroll;
+  overflow-x:hidden;
+  padding:1rem;
+  
+}
+
+
+.menu__Social{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+}
+.menu__Social a{
+width: 123px;
+height: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 14px;
+color: var(--tc1);
+border: 1px solid var(--tc1);
+border-radius:8px;
+}
+
+.menu__Social a:nth-of-type(1){
+  margin-right: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ----------------------------------------------------------- */
 /*                           media                             */
@@ -1163,15 +1346,13 @@ cursor: pointer;
   }
 }
 @media only screen and (max-width: 992px) {
-
-  .plugins__Item_2 div:nth-of-type(2){
+  .plugins__Item_2 div:nth-of-type(2) {
     width: 100%;
   }
 
-  .plugins__Item_2 div:nth-of-type(3){
+  .plugins__Item_2 div:nth-of-type(3) {
     margin-bottom: 80px;
   }
-
 
   .Wbicon__size-6 {
     min-width: 20px;

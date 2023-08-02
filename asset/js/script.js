@@ -6,6 +6,14 @@ $(document).ready(function () {
      
     }    
 
+ $('.SCat-Main > li').mouseenter(function () { 
+   $('.SCat-Main > li').removeClass('show')
+    $(this).addClass('show')
+
+ });
+    
+
+
 
 
   $(".main__Slider").slick({
