@@ -341,7 +341,7 @@
               ></span>
             </a>
 
-            <a href="#">
+            <a href="#" id="openMenu">
               <span
                 class="Wbicon Wbicon__color-2 Wbicon__size-5 ml-2"
                 style="
@@ -1413,71 +1413,75 @@
     
     <!-- control__Panel_Wrapper start -->
 
-<section class="  control__Panel_Wrapper d-flex justify-content-center d-lg-none">
+<section class="control__Panel_Wrapper d-none container no-gutters d-lg-none">
 
-<div class="search__ShadowBox   d-flex flex-column justify-content-center align-items-center">
-  <a href="#">
-    <span
-      class="Wbicon Wbicon__color-1 Wbicon__size-1"
-      style="
-        mask-image: url(asset/svg/Search.svg);
-        -webkit-mask-image: url(asset/svg/Search.svg);
-      "
-    ></span>
-  </a>
-  <span>جستجو</span>
+<div class=" d-flex col-12 ">
+  <div class="search__ShadowBox   d-flex flex-column justify-content-center align-items-center">
+    <a href="#">
+      <span
+        class="Wbicon Wbicon__color-1 Wbicon__size-1"
+        style="
+          mask-image: url(asset/svg/Search.svg);
+          -webkit-mask-image: url(asset/svg/Search.svg);
+        "
+      ></span>
+    </a>
+    <span>جستجو</span>
+  </div>
+  <div class="bottomCircle">
+  <div></div>
+  
+  <div class="control__Basket">
+  
+    <a href="#">
+      <span
+        class="Wbicon Wbicon__color-1 Wbicon__size-2"
+        style="
+          mask-image: url(asset/svg/basketfooter.svg);
+          -webkit-mask-image: url(asset/svg/basketfooter.svg);
+        "
+      ></span>
+      <span>0</span>
+    </a>
+  
+  
+  </div>
+  </div>
+  
+  <div class="phone__CtgBtn  d-flex flex-column justify-content-center align-items-center">
+    <a href="#">
+      <span
+        class="Wbicon Wbicon__color-1 Wbicon__size-1"
+        style="
+          mask-image: url(asset/svg/boxes.svg);
+          -webkit-mask-image: url(asset/svg/boxes.svg);
+        "
+      ></span>
+    </a>
+  
+    <span> دسته بندی </span>
+  
+  </div>
+  
+  
 </div>
-<div class="bottomCircle">
-<div></div>
-
-<div class="control__Basket">
-
-  <a href="#">
-    <span
-      class="Wbicon Wbicon__color-1 Wbicon__size-2"
-      style="
-        mask-image: url(asset/svg/basketfooter.svg);
-        -webkit-mask-image: url(asset/svg/basketfooter.svg);
-      "
-    ></span>
-    <span>0</span>
-  </a>
-
-
-</div>
-</div>
-
-<div class="phone__CtgBtn  d-flex flex-column justify-content-center align-items-center">
-  <a href="#">
-    <span
-      class="Wbicon Wbicon__color-1 Wbicon__size-1"
-      style="
-        mask-image: url(asset/svg/boxes.svg);
-        -webkit-mask-image: url(asset/svg/boxes.svg);
-      "
-    ></span>
-  </a>
-
-  <span> دسته بندی </span>
-
-</div>
-
-
 
 </section>
     <!-- control__Panel_Wrapper end -->
 
-    <!-- control__Bottom  -->
+       <!-- main__ShadowBox -->
+    <section class="main__ShadowBox d-lg-none"></section>
+       <!-- main__ShadowBox -->
 
-
-    <section class="main__ShadowBox  "></section>
-       <div class="mainMenu">
+       <!-- mainMenu -->
+       <section class="mainMenu d-lg-none">
          <div class="d-flex justify-content-between align-items-center">
                     <span
                    class="Wbicon Wbicon__color-2 Wbicon__size-4"
                    style="
                      mask-image: url(asset/svg/close.svg);
-                     -webkit-mask-image: url(asset/svg/close.svg)"></span>
+                     -webkit-mask-image: url(asset/svg/close.svg)" id="closeMenu"></span>
+
 
                              <a href="#">
                                <img src="asset/img/Logo.png" alt="">
@@ -1503,9 +1507,106 @@
 
          </div>
 
-         <div class=""> </div>
+         <nav class="SCat-Nav "> 
+          <ul >
+            <li >
+              <a href="#" >
+                <span>
+                  دسته بندی محصولات
+                </span>
+                <i class="fa fa-bars ml-2" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="justify-content-between">
+               <span>
+                <i class="fa-solid fa-angle-left"></i>
+               </span>
+               <span>
+                مد و پوشاک
+               </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="justify-content-between">
+               <span>
+                <i class="fa-solid fa-angle-left"></i>
+               </span>
+              <span>
+                کیف
+              </span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="justify-content-between">
+                <span>
+                  <i class="fa-solid fa-angle-left"></i>
+                </span>
+                <span>
+                  اکسسوری
+                </span>
+              </a>
+            </li>
+
+
+
+            <li>
+              <a href="#">
+                 صفحه اصلی
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                درباره ما
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                تماس با ما
+              </a>
+            </li>
+          </ul>
+         </nav>
        
-      </div>
+      </section>
+       <!-- mainMenu -->
+
+
+<!-- search section start -->
+<section class="CtgSearch d-none">
+
+<div class="CtgSearch__closeIcon">
+  <span
+                   class="Wbicon bg-white Wbicon__size-4"
+                   style="
+                     mask-image: url(asset/svg/close.svg);
+                     -webkit-mask-image: url(asset/svg/close.svg)"></span>
+</div>
+<p class="text-center text-white">
+  جستجو 
+</p>
+<div class="CtgSearch__Input">
+  <span
+  class=" Wbicon Wbicon__color-2 Wbicon__size-1"
+  style="
+    mask-image: url(asset/svg/Search.svg);
+    -webkit-mask-image: url(asset/svg/Search.svg);
+  "
+></span>
+
+<input type="text" placeholder="محصول مورد نظر خود را جستجو کنید...">
+
+
+
+
+</div>
+
+
+</section>
+
+<!-- search section end -->
+
 
 
 

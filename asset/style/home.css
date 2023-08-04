@@ -130,6 +130,7 @@ header {
   display: flex;
   align-items: center;
   position: relative;
+  cursor: pointer;
 }
 .header__button__inner {
   min-width: 186px;
@@ -156,16 +157,16 @@ header {
   min-width: 700px;
   height: 230px;
   min-height: 230px;
-  flex-shrink: 0;
   border-radius: 0px 0px 16px 16px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.252);
-  z-index: 1 !important;
+  z-index: 1;
   right: 2px;
   top: 70px;
   padding: 1.5rem;
   visibility: hidden;
   opacity: 0;
   transition:.5s;
+  display: none;
 }
 
 /* hover button */
@@ -174,6 +175,8 @@ header {
   opacity: 1;
   transform: translateY(-10px);
   background-color: #ffffff;
+  display: block;
+  
 }
 
 .header__Categories:hover .header__button__inner::before {
@@ -1075,46 +1078,57 @@ text-decoration: none;
 
 .control__Panel_Wrapper {
   position: fixed;
-  bottom: 1px;
+  bottom: .5%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 101;
-  display: flex;
-  border-radius: 10px;
+  border-radius:10px;
+  backdrop-filter: blur(10px);
+  padding: 2px;
 }
+
+
 
 .search__ShadowBox {
   width: calc(50% - 65px);
   background-color: white;
   border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
 }
 .bottomCircle {
   width: 130px;
   position: relative;
   backdrop-filter: blur(2px);
+
+
 }
 .phone__CtgBtn {
   width: calc(50% - 64px);
   background-color: white;
   border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+
 }
 
 .bottomCircle div:nth-of-type(1) {
   background-color: white;
   height: 100%;
   width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
   clip-path: path(
     "M65 62C98.1371 62 125 35.1371 125 2C125 1.33072 124.989 0.663994 124.967 0H130V80H0V0H5.03271C5.01096 0.663994 5 1.33072 5 2C5 35.1371 31.8629 62 65 62Z"
   );
   -webkit-clip-path: path(
     "M65 62C98.1371 62 125 35.1371 125 2C125 1.33072 124.989 0.663994 124.967 0H130V80H0V0H5.03271C5.01096 0.663994 5 1.33072 5 2C5 35.1371 31.8629 62 65 62Z"
   );
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
 }
 
+/* icon basket */
 .control__Basket {
   width: 100px;
   height: 100px;
@@ -1152,17 +1166,17 @@ text-decoration: none;
 /* ----------------------------------------------------------- */
 
 .main__ShadowBox{
-  width:130%;
+  width:100%;
   height: 120%;
   position: fixed;
   top: 0px;
   left: 0px;
   z-index: 998;
   background-color:rgba(0, 0, 0, 0.8) ;
-  display: none;
+  transform: translateX(100%);
+  transition: .4s;
 }
 .mainMenu{
-  display: none;
   min-width:280px;
   width: 320px;
   height:120%;
@@ -1174,7 +1188,8 @@ text-decoration: none;
   overflow-y: scroll;
   overflow-x:hidden;
   padding:1rem;
-  
+  transform: translateX(100%);
+  transition: .4s;
 }
 
 
@@ -1182,6 +1197,7 @@ text-decoration: none;
   display: flex;
   justify-content: flex-end;
   margin-top: 32px;
+ 
 }
 .menu__Social a{
 width: 123px;
@@ -1193,11 +1209,107 @@ font-size: 14px;
 color: var(--tc1);
 border: 1px solid var(--tc1);
 border-radius:8px;
+text-decoration: none;
 }
+
 
 .menu__Social a:nth-of-type(1){
   margin-right: 12px;
 }
+
+
+/* ******** SCat-Main ******* */
+.SCat-Nav{
+  height:300px;
+  margin-top:39px ;
+  display: flex;
+
+}
+.SCat-Nav ul{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  
+
+}
+.SCat-Nav ul li{
+  display: flex;
+  width: 100%;
+  
+}
+.SCat-Nav ul li a{
+  width: 100%;
+  height:50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.SCat-Nav ul li:not(:first-child) a {
+  border-top: 1px solid #C4C4C4;
+}
+
+.SCat-Nav ul li:nth-of-type(1) a{
+  color: var(--mc1);
+}
+.SCat-Nav ul li:nth-of-type(5) a{
+  color: var(--mc1);
+}
+.SCat-Nav ul li a {
+  color: var(--tc1);
+}
+.SCat-Nav ul li a:hover{
+  color: var(--mc1);
+}
+
+
+.CtgSearch{
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(2px);
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 100;
+  padding: 124.5px 22.5px 22.5px 22.5px;
+  transition: .5s;
+}
+.CtgSearch .CtgSearch__closeIcon{
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  width: 22.5px;
+  height: 22.5px;
+  background-color: var(--mc1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+.CtgSearch .CtgSearch__Input{
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+
+}
+.CtgSearch .CtgSearch__Input input{
+  width: 100%;
+  border-radius: 8px;
+  padding: 12px 22px 12px 0px;
+  direction: rtl;
+
+}
+.CtgSearch .CtgSearch__Input span{
+  position: absolute;
+  left: 8px;
+  top:calc(50% - 16px);
+}
+
 
 
 

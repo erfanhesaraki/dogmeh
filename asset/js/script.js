@@ -13,6 +13,57 @@ $(document).ready(function () {
  });
     
 
+$('#openMenu').click(function (e) { 
+  // alert('hi erfan')
+  $('.main__ShadowBox').css('transform', 'translateX(0%)' );
+});
+$('.phone__CtgBtn').click(function (e) { 
+  // alert('hi erfan')
+  $('.main__ShadowBox').css('transform', 'translateX(0%)' );
+});
+
+$('#openMenu').click(function (e) {
+  $('.mainMenu').css('transform', 'translateX(0%)');
+});
+$('.phone__CtgBtn').click(function (e) {
+  $('.mainMenu').css('transform', 'translateX(0%)');
+});
+
+$('#closeMenu').click(function (e) { 
+  $('.main__ShadowBox').css('transform', 'translateX(100%)');
+});
+
+$('#closeMenu').click(function (e) { 
+  $('.mainMenu').css('transform', 'translateX(100%)');
+});
+$('.main__ShadowBox').click(function (e) { 
+  $('.main__ShadowBox').css('transform', 'translateX(100%)');
+  $('.mainMenu').css('transform', 'translateX(100%)');
+});
+
+
+$('.search__ShadowBox').click(function (e) { 
+  $('.CtgSearch').css('opacity', '1' , 'visibility', 'visible')
+  $('.CtgSearch').removeClass('d-none')
+
+});
+$('.CtgSearch__closeIcon').click(function (e) { 
+  $('.CtgSearch').css('opacity', '0' , 'visibility', 'hidden')
+  $('.CtgSearch').addClass('d-none')
+});
+
+$(window).scroll(function() {
+  let scrollTopValue = $(window).scrollTop();
+  let windowWidth = $(window).width();
+  if (scrollTopValue > 100 && windowWidth <= 992) {
+    $('.control__Panel_Wrapper').removeClass('d-none');
+  } else {
+    $('.control__Panel_Wrapper').addClass('d-none');
+  }
+});
+
+
+
 
 
 
@@ -35,13 +86,21 @@ $(document).ready(function () {
     adaptiveHeight: true,
     speed: 500,
     autoplaySpeed:500 ,
-    // appendArrows:".append__Slider_Arrow__section-2",
     slidesToShow: 4,
     slidesToScroll: 4,
     arrow:true,
     responsive: [
+      // {
+      //   breakpoint: 1024,
+      //   settings: {
+      //     slidesToShow: 3,
+      //     slidesToScroll: 3,
+      //     infinite: true,
+      //     dots: true
+      //   }
+      // },
       {
-        breakpoint: 1024,
+        breakpoint: 992,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -49,6 +108,7 @@ $(document).ready(function () {
           dots: true
         }
       },
+
       {
         breakpoint: 768,
         settings: {
