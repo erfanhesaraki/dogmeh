@@ -51,6 +51,10 @@ list-style-type: none;
 --icon-color__gray:#616161;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 
 .mainSpace{
     margin-top: 80px;

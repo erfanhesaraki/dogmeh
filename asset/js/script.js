@@ -42,6 +42,7 @@ $('.main__ShadowBox').click(function (e) {
 });
 
 
+
 $('.search__ShadowBox').click(function (e) { 
   $('.CtgSearch').css('opacity', '1' , 'visibility', 'visible')
   $('.CtgSearch').removeClass('d-none')
@@ -52,19 +53,34 @@ $('.CtgSearch__closeIcon').click(function (e) {
   $('.CtgSearch').addClass('d-none')
 });
 
-$(window).scroll(function() {
-  let scrollTopValue = $(window).scrollTop();
-  let windowWidth = $(window).width();
-  if (scrollTopValue > 100 && windowWidth <= 992) {
-    $('.control__Panel_Wrapper').removeClass('d-none');
-  } else {
-    $('.control__Panel_Wrapper').addClass('d-none');
+
+
+
+$(".SCat-Nav>ul>li").on("click",function(){
+  if($(this).children(".SCat-Nav__subMenu").hasClass("active")){
+    $(this).children(".SCat-Nav__subMenu").removeClass("active")
+  }else{
+    $(this).children(".SCat-Nav__subMenu").addClass("active")
   }
-});
+})
+
+$(".subMenu__Back").on("click",function(){
+$('.SCat-Nav__subMenu').removeClass('active')
+})
 
 
 
-
+if(window.innerWidth < 992){
+  $(window).scroll(function() {
+    let scrollTopValue = $(window).scrollTop();
+    let windowWidth = $(window).width();
+    if (scrollTopValue > 100 && windowWidth <= 992) {
+      $('.control__Panel_Wrapper').removeClass('d-none');
+    } else {
+      $('.control__Panel_Wrapper').addClass('d-none');
+    }
+  });
+}
 
 
   $(".main__Slider").slick({
@@ -80,25 +96,22 @@ $(window).scroll(function() {
     arrow:true,
   });
 
+
+
+
+
+
+  console.log(window.innerWidth)
   $(".home__Product_List").slick({
-    dots: false,
     infinite: true,
-    adaptiveHeight: true,
+    // adaptiveHeight: true,
     speed: 500,
-    autoplaySpeed:500 ,
+    autoplaySpeed:500,
+    // autoplay:true,
     slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToScroll: 1,
     arrow:true,
     responsive: [
-      // {
-      //   breakpoint: 1024,
-      //   settings: {
-      //     slidesToShow: 3,
-      //     slidesToScroll: 3,
-      //     infinite: true,
-      //     dots: true
-      //   }
-      // },
       {
         breakpoint: 992,
         settings: {
@@ -108,7 +121,6 @@ $(window).scroll(function() {
           dots: true
         }
       },
-
       {
         breakpoint: 768,
         settings: {
@@ -124,8 +136,9 @@ $(window).scroll(function() {
         }
       }
     ]
- 
+    
   });
+  console.log(window.innerWidth)
 
   $(".home__Plugins_List").slick({
     dots: false,
