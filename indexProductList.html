@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/f1c433517c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="path/to/nice-select.css" />
+    <link rel="stylesheet" href="asset/style/slick-theme.css" />
+    <link rel="stylesheet" href="asset/style/nice-select.css" />
+    <link rel="stylesheet" href="asset/style/style.productList.css" />
+    <link rel="stylesheet" href="asset/style/home.css" />
+    <link rel="stylesheet" href="asset/style/skin.css" />
+  </head>
+  <body>
+    <header class="header">
+      <!-- start section header -->
+      <section class="container header__section_1">
+        <!-- start row header -->
+        <div class="row no-gutters justify-content-between">
+          <div class="col-4 col-md">
+            <div
+              class="col-12 col-md-9 d-flex justify-content-start justify-content-md-between align-items-center p-0 h-100 header__Item"
+            >
+              <a href="#">
+                <span
+                  class="d-none d-md-flex Wbicon Wbicon__color-2 Wbicon__size-3"
+                  style="
+                    mask-image: url(asset/svg/Phone.svg);
+                    -webkit-mask-image: url(asset/svg/Phone.svg);
+                  "
+                ></span>
+              </a>
+
+              <a
+                href="tel:+۰۹۳۰۲۵۷۳۳۷۴"
+                class="d-none d-lg-flex Wbicon__color-3"
+                ><span>۰۹۳۰۲۵۷۳۳۷۴</span></a
+              >
+
+              <a href="#">
+                <span
+                  class="d-none d-md-flex Wbicon Wbicon__color-2 Wbicon__size-3"
+                  style="
+                    mask-image: url(asset/svg/heart.svg);
+                    -webkit-mask-image: url(asset/svg/heart.svg);
+                  "
+                ></span>
+              </a>
+
+              <a href="#">
+                <div class="d-none d-md-flex header__basket">
+                  <span
+                    class="Wbicon Wbicon__color-2 Wbicon__size-3"
+                    style="
+                      mask-image: url(asset/svg/basket.svg);
+                      -webkit-mask-image: url(asset/svg/basket.svg);
+                    "
+                  ></span>
+                  <div>0</div>
+                </div>
+              </a>
+
+              <a href="#">
+                <span
+                  class="d-none d-lg-flex Wbicon Wbicon__color-2 Wbicon__size-3"
+                  style="
+                    mask-image: url(asset/svg/user.svg);
+                    -webkit-mask-image: url(asset/svg/user.svg);
+                  "
+                ></span>
+              </a>
+              <a href="#">
+                <span
+                  class="d-none d-lg-flex Wbicon Wbicon__color-2 Wbicon__size-3"
+                  style="
+                    mask-image: url(asset/svg/Search.svg);
+                    -webkit-mask-image: url(asset/svg/Search.svg);
+                  "
+                ></span>
+              </a>
+
+              <a href="#">
+                <span
+                  class="d-md-none Wbicon Wbicon__color-2 Wbicon__size-3"
+                  style="
+                    mask-image: url(asset/svg/Calling.svg);
+                    -webkit-mask-image: url(asset/svg/Calling.svg);
+                  "
+                ></span>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-4 col-md-1">
+            <figure
+              class="col d-flex justify-content-center align-items-center h-100"
+            >
+              <img src="asset/img/HeaderLogo.png" alt="" />
+            </figure>
+          </div>
+
+          <div class="d-none d-lg-flex col-md row no-gutters">
+            <nav class="col-7">
+              <ul
+                class="d-flex justify-content-end align-items-center h-100 header__menu"
+              >
+                <li class="mx-1">
+                  <a href="#">تماس باما</a>
+                </li>
+                <li class="mx-1">
+                  <a href="#">درباره ما</a>
+                </li>
+                <li class="mx-2">
+                  <a href="#">صفحه اصلی</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div
+              class="col-5 d-flex align-items-center justify-content-end position-relative"
+            >
+              <div class="header__Categories">
+                <div
+                  class="d-flex justify-content-around align-content-center header__button__inner inner"
+                >
+                  <span
+                    class="Wbicon Wbicon__color-1 Wbicon__size-3"
+                    style="
+                      mask-image: url(asset/svg/down.svg);
+                      -webkit-mask-image: url(asset/svg/down.svg);
+                    "
+                  ></span>
+                  <span class=""> دسته بندی محصولات </span>
+                  <span
+                    class="Wbicon Wbicon__color-1 Wbicon__size-4"
+                    style="
+                      mask-image: url(asset/svg/apps.svg);
+                      -webkit-mask-image: url(asset/svg/apps.svg);
+                    "
+                  ></span>
+                </div>
+
+                <!-- ************************header__button__out*************** -->
+
+                <div class="header__button__out hidden position-absolute">
+                  <nav
+                    class="comntainer h-100 headerCtg-inner d-flex justify-content-end"
+                  >
+                    <ul class="row no-gutters h-100 SCat-Main">
+                      <li class="SCat-Main__Li">
+                        <div class="category__Title">
+                          <div>
+                            <span>
+                              <i class="fa-solid fa-chevron-left fa-xs"></i>
+                            </span>
+                            <span>مشاهده همه محصولات مد و پوشاک</span>
+                          </div>
+                          <span>اکسسوری</span>
+                        </div>
+                        <a href="#" class="SCat-Main__Li__a" id="accessory"
+                          >اکسسوری</a
+                        >
+                        <ul class="SCat-Main-subMenu">
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="SCat-Main__Li">
+                        <div class="category__Title">
+                          <div>
+                            <span>
+                              <i class="fa-solid fa-chevron-left fa-xs"></i>
+                            </span>
+                            <span>مشاهده همه محصولات مد و پوشاک</span>
+                          </div>
+                          <span>مد و پوشاک</span>
+                        </div>
+                        <a
+                          href="#"
+                          class="SCat-Main__Li__a"
+                          id="FashionClothing"
+                          >مد و پوشاک</a
+                        >
+                        <ul class="SCat-Main-subMenu">
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="SCat-Main__Li">
+                        <div class="category__Title">
+                          <div>
+                            <span>
+                              <i class="fa-solid fa-chevron-left fa-xs"></i>
+                            </span>
+                            <span>
+                              <a href="#"> مشاهده همه محصولات مد و پوشاک </a>
+                            </span>
+                          </div>
+                          <span>کیف</span>
+                        </div>
+                        <a href="#" class="SCat-Main__Li__a" id="Bag">کیف</a>
+                        <ul class="SCat-Main-subMenu">
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+                          <li>
+                            <a href="">گوشواره</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col d-flex justify-content-end align-items-center d-lg-none header__Icon_Right"
+          >
+            <a href="#">
+              <span
+                class="d-none d-md-flex Wbicon Wbicon__color-2 Wbicon__size-3 mx-2"
+                style="
+                  mask-image: url(asset/svg/Search.svg);
+                  -webkit-mask-image: url(asset/svg/Search.svg);
+                "
+              ></span>
+            </a>
+
+            <a href="#">
+              <span
+                class="d-none d-md-flex Wbicon Wbicon__color-2 Wbicon__size-3 mx-2"
+                style="
+                  mask-image: url(asset/svg/user.svg);
+                  -webkit-mask-image: url(asset/svg/user.svg);
+                "
+              ></span>
+            </a>
+
+            <a href="#" id="openMenu">
+              <span
+                class="Wbicon Wbicon__color-2 Wbicon__size-3 ml-2"
+                style="
+                  mask-image: url(asset/svg/menu.svg);
+                  -webkit-mask-image: url(asset/svg/menu.svg);
+                "
+              ></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- end row header -->
+      </section>
+      <!-- end section header -->
+    </header>
+    <!-- start main  -->
+    <main class="container">
+      <!-- start WB-breadcrumb -->
+
+      <section class="row no-gutters">
+        <nav class="col-12 WB-breadcrumb">
+          <ul class="col-12">
+            <li>
+              <a href="#">مانتو</a>
+            </li>
+            <li>
+              <i class="fa fa-angle-left"></i>
+              <a href="#">مد و پوشاک</a>
+            </li>
+            <li>
+              <i class="fa fa-angle-left"></i>
+              <a href="#">صفحه اصلی</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <!-- end WB-breadcrumb -->
+
+      <!--start product_List -->
+      <section class="row no-gutters product_List">
+        <!-- start product-Left -->
+        <section class="col-12 col-lg-9 product-Left">
+          <!-- start product_List__title -->
+          <div class="row no-gutters d-flex justify-content-between">
+            <div class="col-11 product_List__title">
+              <span
+                class="Wbicon Wbicon__color-2 Wbicon__size-16P"
+                style="
+                  mask-image: url(asset/svg/filter.svg);
+                  -webkit-mask-image: url(asset/svg/filter.svg);
+                "
+              ></span>
+
+              <span class="ml-1">مرتب سازی براساس:</span>
+
+              <select class="orderBy">
+                <option value="جدیدترین">جدیدترین</option>
+                <option value="پربازدیدترین">پربازدیدترین</option>
+                <option value="مرتبط ترین">مرتبط ترین</option>
+                <option value="ارزان ترین">ارزان ترین</option>
+                <option value="گران ترین">گران ترین</option>
+                <option value="پرفروش ترین">پرفروش ترین</option>
+              </select>
+            </div>
+            <span class="col-1 d-flex justify-content-end align-items-center"
+              >مانتو</span
+            >
+          </div>
+
+          <!-- end product_List__title -->
+          <!--start Ctr__product__List -->
+          <div class="Ctr__product__List">
+            <div class="Ctr__product__item bordr d-flex justify-content-center">
+              <figure>
+                <img src="asset/img/Img__product.png" alt="" />
+
+                <figcaption>
+                  <div class="fig__item_1">
+                    <span>نام محصول</span>
+                  </div>
+
+                  <div
+                    class="d-flex justify-content-between align-items-center fig__item_2"
+                  >
+                    <div
+                      class="d-flex justify-content-start align-items-center"
+                    >
+                      <span>۴.۲۶۴.۰۰۰ تومان</span>
+                      <!-- <span>۴.۲۶۴.۰۰۰ </span> -->
+                    </div>
+                    <div>
+                      <span
+                        class="d-flex Wbicon bg-white Wbicon__size-3"
+                        style="
+                          mask-image: url(asset/svg/shoppingCart.svg);
+                          -webkit-mask-image: url(asset/svg/shoppingCart.svg);
+                        "
+                      ></span>
+                    </div>
+                  </div>
+                  <!-- <span class="Discount"> ۲۰٪ </span> -->
+                  <div class="interest">
+                    <span
+                      class="d-flex Wbicon Wbicon__color-1 Wbicon__size-3"
+                      style="
+                        mask-image: url(asset/img/heart.svg);
+                        -webkit-mask-image: url(asset/img/heart.svg);
+                      "
+                    ></span>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="Ctr__product__item bordr d-flex justify-content-center">
+              <figure>
+                <img src="asset/img/Img__product.png" alt="" />
+
+                <figcaption>
+                  <div class="fig__item_1">
+                    <span>نام محصول</span>
+                  </div>
+
+                  <div
+                    class="d-flex justify-content-between align-items-center fig__item_2"
+                  >
+                    <div
+                      class="d-flex justify-content-start align-items-center"
+                    >
+                      <span>۴.۲۶۴.۰۰۰ تومان</span>
+                      <span>۴.۲۶۴.۰۰۰ </span>
+                    </div>
+                    <div>
+                      <span
+                        class="d-flex Wbicon bg-white Wbicon__size-3"
+                        style="
+                          mask-image: url(asset/svg/shoppingCart.svg);
+                          -webkit-mask-image: url(asset/svg/shoppingCart.svg);
+                        "
+                      ></span>
+                    </div>
+                  </div>
+                  <span class="Discount"> ۲۰٪ </span>
+                  <div class="interest">
+                    <span
+                      class="d-flex Wbicon Wbicon__color-1 Wbicon__size-3"
+                      style="
+                        mask-image: url(asset/img/heart.svg);
+                        -webkit-mask-image: url(asset/img/heart.svg);
+                      "
+                    ></span>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="Ctr__product__item bordr d-flex justify-content-center">
+              <figure>
+                <img src="asset/img/Img__product.png" alt="" />
+
+                <figcaption>
+                  <div class="fig__item_1">
+                    <span>نام محصول</span>
+                  </div>
+
+                  <div
+                    class="d-flex justify-content-between align-items-center fig__item_2"
+                  >
+                    <div
+                      class="d-flex justify-content-start align-items-center"
+                    >
+                      <span>۴.۲۶۴.۰۰۰ تومان</span>
+                      <!-- <span>۴.۲۶۴.۰۰۰ </span> -->
+                    </div>
+                    <div>
+                      <span
+                        class="d-flex Wbicon bg-white Wbicon__size-3"
+                        style="
+                          mask-image: url(asset/svg/shoppingCart.svg);
+                          -webkit-mask-image: url(asset/svg/shoppingCart.svg);
+                        "
+                      ></span>
+                    </div>
+                  </div>
+                  <!-- <span class="Discount"> ۲۰٪ </span> -->
+                  <div class="interest">
+                    <span
+                      class="d-flex Wbicon Wbicon__color-1 Wbicon__size-3"
+                      style="
+                        mask-image: url(asset/img/heart.svg);
+                        -webkit-mask-image: url(asset/img/heart.svg);
+                      "
+                    ></span>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="Ctr__product__item bordr d-flex justify-content-center">
+              <figure>
+                <img src="asset/img/Img__product.png" alt="" />
+
+                <figcaption>
+                  <div class="fig__item_1">
+                    <span>نام محصول</span>
+                  </div>
+
+                  <div
+                    class="d-flex justify-content-between align-items-center fig__item_2"
+                  >
+                    <div
+                      class="d-flex justify-content-start align-items-center"
+                    >
+                      <span>۴.۲۶۴.۰۰۰ تومان</span>
+                      <span>۴.۲۶۴.۰۰۰ </span>
+                    </div>
+                    <div>
+                      <span
+                        class="d-flex Wbicon bg-white Wbicon__size-3"
+                        style="
+                          mask-image: url(asset/svg/shoppingCart.svg);
+                          -webkit-mask-image: url(asset/svg/shoppingCart.svg);
+                        "
+                      ></span>
+                    </div>
+                  </div>
+                  <span class="Discount"> ۲۰٪ </span>
+                  <div class="interest">
+                    <span
+                      class="d-flex Wbicon Wbicon__color-1 Wbicon__size-3"
+                      style="
+                        mask-image: url(asset/img/heart.svg);
+                        -webkit-mask-image: url(asset/img/heart.svg);
+                      "
+                    ></span>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="Ctr__product__item bordr d-flex justify-content-center">
+              <figure>
+                <img src="asset/img/Img__product.png" alt="" />
+
+                <figcaption>
+                  <div class="fig__item_1">
+                    <span>نام محصول</span>
+                  </div>
+
+                  <div
+                    class="d-flex justify-content-between align-items-center fig__item_2"
+                  >
+                    <div
+                      class="d-flex justify-content-start align-items-center"
+                    >
+                      <span>۴.۲۶۴.۰۰۰ تومان</span>
+                      <span>۴.۲۶۴.۰۰۰ </span>
+                    </div>
+                    <div>
+                      <span
+                        class="d-flex Wbicon bg-white Wbicon__size-3"
+                        style="
+                          mask-image: url(asset/svg/shoppingCart.svg);
+                          -webkit-mask-image: url(asset/svg/shoppingCart.svg);
+                        "
+                      ></span>
+                    </div>
+                  </div>
+                  <span class="Discount"> ۲۰٪ </span>
+                  <div class="interest">
+                    <span
+                      class="d-flex Wbicon Wbicon__color-1 Wbicon__size-3"
+                      style="
+                        mask-image: url(asset/img/heart.svg);
+                        -webkit-mask-image: url(asset/img/heart.svg);
+                      "
+                    ></span>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="Ctr__product__item bordr d-flex justify-content-center">
+              <figure>
+                <img src="asset/img/Img__product.png" alt="" />
+
+                <figcaption>
+                  <div class="fig__item_1">
+                    <span>نام محصول</span>
+                  </div>
+
+                  <div
+                    class="d-flex justify-content-between align-items-center fig__item_2"
+                  >
+                    <div
+                      class="d-flex justify-content-start align-items-center"
+                    >
+                      <span>۴.۲۶۴.۰۰۰ تومان</span>
+                      <!-- <span>۴.۲۶۴.۰۰۰ </span> -->
+                    </div>
+                    <div>
+                      <span
+                        class="d-flex Wbicon bg-white Wbicon__size-3"
+                        style="
+                          mask-image: url(asset/svg/shoppingCart.svg);
+                          -webkit-mask-image: url(asset/svg/shoppingCart.svg);
+                        "
+                      ></span>
+                    </div>
+                  </div>
+                  <!-- <span class="Discount"> ۲۰٪ </span> -->
+                  <div class="interest">
+                    <span
+                      class="d-flex Wbicon Wbicon__color-1 Wbicon__size-3"
+                      style="
+                        mask-image: url(asset/img/heart.svg);
+                        -webkit-mask-image: url(asset/img/heart.svg);
+                      "
+                    ></span>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="Ctr__product__item bordr d-flex justify-content-center">
+              <figure>
+                <img src="asset/img/Img__product.png" alt="" />
+
+                <figcaption>
+                  <div class="fig__item_1">
+                    <span>نام محصول</span>
+                  </div>
+
+                  <div
+                    class="d-flex justify-content-between align-items-center fig__item_2"
+                  >
+                    <div
+                      class="d-flex justify-content-start align-items-center"
+                    >
+                      <span>۴.۲۶۴.۰۰۰ تومان</span>
+                      <span>۴.۲۶۴.۰۰۰ </span>
+                    </div>
+                    <div>
+                      <span
+                        class="d-flex Wbicon bg-white Wbicon__size-3"
+                        style="
+                          mask-image: url(asset/svg/shoppingCart.svg);
+                          -webkit-mask-image: url(asset/svg/shoppingCart.svg);
+                        "
+                      ></span>
+                    </div>
+                  </div>
+                  <span class="Discount"> ۲۰٪ </span>
+                  <div class="interest">
+                    <span
+                      class="d-flex Wbicon Wbicon__color-1 Wbicon__size-3"
+                      style="
+                        mask-image: url(asset/img/heart.svg);
+                        -webkit-mask-image: url(asset/img/heart.svg);
+                      "
+                    ></span>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="Ctr__product__item bordr d-flex justify-content-center">
+              <figure>
+                <img src="asset/img/Img__product.png" alt="" />
+
+                <figcaption>
+                  <div class="fig__item_1">
+                    <span>نام محصول</span>
+                  </div>
+
+                  <div
+                    class="d-flex justify-content-between align-items-center fig__item_2"
+                  >
+                    <div
+                      class="d-flex justify-content-start align-items-center"
+                    >
+                      <span>۴.۲۶۴.۰۰۰ تومان</span>
+                      <!-- <span>۴.۲۶۴.۰۰۰ </span> -->
+                    </div>
+                    <div>
+                      <span
+                        class="d-flex Wbicon bg-white Wbicon__size-3"
+                        style="
+                          mask-image: url(asset/svg/shoppingCart.svg);
+                          -webkit-mask-image: url(asset/svg/shoppingCart.svg);
+                        "
+                      ></span>
+                    </div>
+                  </div>
+                  <!-- <span class="Discount"> ۲۰٪ </span> -->
+                  <div class="interest">
+                    <span
+                      class="d-flex Wbicon Wbicon__color-1 Wbicon__size-3"
+                      style="
+                        mask-image: url(asset/img/heart.svg);
+                        -webkit-mask-image: url(asset/img/heart.svg);
+                      "
+                    ></span>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="Ctr__product__item bordr d-flex justify-content-center">
+              <figure>
+                <img src="asset/img/Img__product.png" alt="" />
+
+                <figcaption>
+                  <div class="fig__item_1">
+                    <span>نام محصول</span>
+                  </div>
+
+                  <div
+                    class="d-flex justify-content-between align-items-center fig__item_2"
+                  >
+                    <div
+                      class="d-flex justify-content-start align-items-center"
+                    >
+                      <span>۴.۲۶۴.۰۰۰ تومان</span>
+                      <!-- <span>۴.۲۶۴.۰۰۰ </span> -->
+                    </div>
+                    <div>
+                      <span
+                        class="d-flex Wbicon bg-white Wbicon__size-3"
+                        style="
+                          mask-image: url(asset/svg/shoppingCart.svg);
+                          -webkit-mask-image: url(asset/svg/shoppingCart.svg);
+                        "
+                      ></span>
+                    </div>
+                  </div>
+                  <!-- <span class="Discount"> ۲۰٪ </span> -->
+                  <div class="interest">
+                    <span
+                      class="d-flex Wbicon Wbicon__color-1 Wbicon__size-3"
+                      style="
+                        mask-image: url(asset/img/heart.svg);
+                        -webkit-mask-image: url(asset/img/heart.svg);
+                      "
+                    ></span>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!--end Ctr__product__List -->
+          <!-- start Ctr__PagingTion -->
+          <div class="Ctr__PagingTion ">
+            <nav class="row no-gutters justify-content-center align-items-center border">
+              <ul class="d-flex justify-content-between ">
+                <li>
+                  <a href="#">
+                    <span
+                    class="d-flex Wbicon Wbicon__color-1 Wbicon__size-3"
+                    style=" mask-image: url(asset/svg/);
+                    -webkit-mask-image: url(asset/svg/)
+                    ;
+                    "
+                  ></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">1</a>
+                </li>
+                <li>
+                  <a href="#">2</a>
+                </li>
+                <li>
+                  <a href="#">3</a>
+                </li>
+                <li>
+                  <a href="#">4</a>
+                </li>
+                <li>
+                  <a href="#">5</a>
+                </li>
+                <li>
+                  <a href="#" class="">
+                    <span
+                    class="d-flex Wbicon Wbicon__color-1 Wbicon__size-3"
+                    style="
+                      mask-image: url(asset/svg/AR-right.svg);
+                      -webkit-mask-image: url(asset/svg/AR-right.svg);
+                    "
+                  ></span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- end Ctr__PagingTion -->
+        </section>
+
+        <!-- end product-Left -->
+
+        <!-- start product-Right -->
+        <section class="col-12 col-lg product-Right py-2 bg-warning"></section>
+        <!-- start product-Right -->
+      </section>
+      <!--end product_List -->
+    </main>
+
+    <!-- end main  -->
+
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="asset/js/jquery.nice-select.min.js"></script>
+    <script src="asset/js/scriptProductList.js"></script>
+    <script src="asset/js/script.js"></script>
+  </body>
+</html>
