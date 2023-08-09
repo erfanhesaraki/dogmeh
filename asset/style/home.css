@@ -102,6 +102,13 @@ header {
   min-width: 2.25rem;
   height: 1rem;
 }
+.Wbicon__size-13{
+  width: 32px;
+  min-width: 32px;
+  height: 1.75rem;
+}
+
+
 
 /* icons svg/ */
 
@@ -457,7 +464,6 @@ header {
 .main__Section-1 .slick-next:before {
   mask-image: url(../svg/arrowleft.svg);
   -webkit-mask-image: url(../svg/arrowleft.svg);
-
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: cover;
@@ -1731,7 +1737,7 @@ line-height: normal;
       height: 25px;
     }
   }
-}
+
 
 @media (max-width: 576px) {
   .Wbicon__size-6 {

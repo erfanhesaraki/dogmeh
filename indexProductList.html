@@ -774,18 +774,20 @@
 
           <!--end Ctr__product__List -->
           <!-- start Ctr__PagingTion -->
-          <div class="Ctr__PagingTion ">
-            <nav class="row no-gutters justify-content-center align-items-center border">
-              <ul class="d-flex justify-content-between ">
+          <div class="Ctr__PagingTion">
+            <nav
+              class="row no-gutters justify-content-center align-items-center"
+            >
+              <ul class="d-flex justify-content-between">
                 <li>
                   <a href="#">
                     <span
-                    class="d-flex Wbicon Wbicon__color-1 Wbicon__size-3"
-                    style=" mask-image: url(asset/svg/);
-                    -webkit-mask-image: url(asset/svg/)
-                    ;
-                    "
-                  ></span>
+                      class="d-flex Wbicon Wbicon__color-1 Wbicon__size-13"
+                      style="
+                        mask-image: url(asset/svg/ARO.svg);
+                        -webkit-mask-image: url(asset/svg/ARO.svg);
+                      "
+                    ></span>
                   </a>
                 </li>
                 <li>
@@ -806,12 +808,12 @@
                 <li>
                   <a href="#" class="">
                     <span
-                    class="d-flex Wbicon Wbicon__color-1 Wbicon__size-3"
-                    style="
-                      mask-image: url(asset/svg/AR-right.svg);
-                      -webkit-mask-image: url(asset/svg/AR-right.svg);
-                    "
-                  ></span>
+                      class="d-flex Wbicon bg-white Wbicon__size-13"
+                      style="
+                        mask-image: url(asset/svg/AR-right.svg);
+                        -webkit-mask-image: url(asset/svg/AR-right.svg);
+                      "
+                    ></span>
                   </a>
                 </li>
               </ul>
@@ -823,7 +825,139 @@
         <!-- end product-Left -->
 
         <!-- start product-Right -->
-        <section class="col-12 col-lg product-Right py-2 bg-warning"></section>
+        <section class="col-12 col-lg product-Right no-gutters">
+          <div class="product-Right__content">
+            <div class="product-Right__title">
+              <span>فیلتر</span>
+              <span
+                class="Wbicon Wbicon__color-2 Wbicon__size-16P"
+                style="
+                  mask-image: url(asset/svg/filter.svg);
+                  -webkit-mask-image: url(asset/svg/filter.svg);
+                "
+              ></span>
+            </div>
+
+            <nav class="product-Right__CatNav">
+              <ul class="d-flex flex-column align-items-end">
+                <li class="CatNav__item">
+                  <a href="#">مد و پوشاک</a>
+                  <ul class="CatNav__item__SubMenu">
+                    <li>
+                      <a href="#">مانتو</a>
+                    </li>
+                    <li>
+                      <a href="#">مانتو</a>
+                    </li>
+                    <li>
+                      <a href="#">مانتو</a>
+                    </li>
+                    <li>
+                      <a href="#">مانتو</a>
+                    </li>
+                    <li>
+                      <a href="#">مانتو</a>
+                    </li>
+                    <li>
+                      <a href="#">مانتو</a>
+                    </li>
+                  </ul>
+                  <div class="CatNav__item__Arrow">
+                    <i class="fa fa-chevron-down"></i>
+                  </div>
+                </li>
+                <li class="CatNav__item">
+                  <div class="CatNav__item__Arrow">
+                    <i class="fa fa-chevron-down"></i>
+                  </div>
+                  <a href="#"> کیف</a>
+                  <!-- <ul>
+                  <li>
+                    <a href="#">مانتو</a>
+                  </li>
+                </ul> -->
+                </li>
+                <li class="CatNav__item">
+                  <div class="CatNav__item__Arrow">
+                    <i class="fa fa-chevron-down"></i>
+                  </div>
+                  <a href="#">اکسسوری</a>
+                  <!-- <ul>
+                  <li>
+                    <a href="#">مانتو</a>
+                  </li>
+                </ul> -->
+                </li>
+              </ul>
+            </nav>
+
+            <div class="PriceRange">
+              <label for="Price">محدوده قیمت (تومان) </label>
+              <input type="range" name="Price" max="100" min="0" />
+            </div>
+
+            <div class="Brands">
+              <span class="Brands__Title">
+                سایزها
+              </span>
+
+              <div class="Brands__item">  
+                <input id="Sz-1" type="checkbox">
+                <label for="Sz-1">سایز  ۱ (۴۰-۳۶)</label>
+              </div>
+              <div class="Brands__item">  
+                <input id="Sz-2" type="checkbox">
+                <label for="Sz-2">سایز  ۲ (۴۴-۴۲)  </label>
+              </div>
+              <div class="Brands__item">  
+                <input id="Sz-3"  type="checkbox">
+                <label for="Sz-3" >  سایز  ۳ (۴۸-۴۶)</label>
+              </div>
+              <div class="Brands__item">  
+                <input id="Sz-4" type="checkbox">
+                <label for="Sz-4"> FREE SIZE </label>
+              </div>
+              <div class="Brands__item">  
+                <input id="Sz-5" type="checkbox">
+                <label for="Sz-5"> سایز 1 (42-36) </label>
+              </div>
+              <div class="Brands__item">  
+                <input id="Sz-6" type="checkbox">
+                <label for="Sz-6"> سایز 2 (48-44) </label>
+              </div>
+              <div class="Brands__item">  
+                <input id="Sz-7" type="checkbox">
+                <label for="Sz-7"> سایز 1(38-36) </label>
+              </div>
+              <div class="Brands__item">  
+                <input id="Sz-8" type="checkbox">
+                <label for="Sz-8" > سایز 2(42-40) </label>
+              </div>
+              
+            </div>
+
+            <div class="OnlyAvailableItems">
+             
+              <input type="checkbox"  id="availability">
+              <label for="availability" >
+                
+              </label>
+
+              <p >فقط کالاهای موجود</p>
+              
+            </div>
+
+
+            <div class="submit_btn">
+              <input type="button" value="اعمال فیلتر">
+            </div>
+
+
+
+
+
+          </div>
+        </section>
         <!-- start product-Right -->
       </section>
       <!--end product_List -->
