@@ -9,11 +9,9 @@ $(document).ready(function () {
   });
 
   $("#openMenu").click(function (e) {
-    // alert('hi erfan')
     $(".main__ShadowBox").css("transform", "translateX(0%)");
   });
   $(".phone__CtgBtn").click(function (e) {
-    // alert('hi erfan')
     $(".main__ShadowBox").css("transform", "translateX(0%)");
   });
 
