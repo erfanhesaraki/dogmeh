@@ -1,0 +1,10 @@
+.DropModels >figure> img{
+    width: 90px;
+    height: 90px;
+}
+
+.CenterImage > figure > img{
+    width: 400px;
+    height:400px;
+
+}
