@@ -26,6 +26,20 @@ $(document).ready(function () {
   // End product-Right__Arrow
 });
 
+function formatNumbersWithCommas(number) {
+  const strNumber = number.toString();
+  const parts = [];
+console.log(parts);
+  for (let i = strNumber.length; i > 0; i -= 3) {
+    const max = Math.max(i - 3, 0);
+    console.log(max);
+    const slicedItem = strNumber.slice(max, i)
+    console.log(slicedItem);
+    parts.unshift(strNumber.slice(Math.max(i - 3, 0), i));
+  }
+  return parts.join(',');
+}
+
 console.log(jsonFile);
 
 // start Detail
@@ -61,7 +75,7 @@ $(".DropModels_Image").click(function () {
     .find("img")
     .attr("src", "https://dogmehshop.com/" + __seletImg);
 
-  let __selectPrice = selectedItem.UnitCost;
+  let __selectPrice = formatNumbersWithCommas(selectedItem.UnitCost);
   let __seletQtyRemaining = selectedItem.QtyRemaining;
 
   $(".Cat__price > p").text(__selectPrice);
@@ -71,8 +85,6 @@ $(".DropModels_Image").click(function () {
   } else if (__seletQtyRemaining === 0) {
     $(".Cat__price > span").text("ناموجود است").css("color", "red");
   }
-
-  // $('.Cat__price > span').text(__seletQtyRemaining)
 });
 
 function loadDefault() {
@@ -80,7 +92,7 @@ function loadDefault() {
   let modelId = firstModel.ModelId;
   let modelName = firstModel.ModelName;
   let imageUrl = firstModel.ImageUrl;
-  let unitCost = firstModel.UnitCost;
+  let unitCost = formatNumbersWithCommas(firstModel.UnitCost);
   let qtyRemaining = firstModel.QtyRemaining;
 
   console.log("Model ID:", modelId);
@@ -105,5 +117,11 @@ function loadDefault() {
   }
 }
 loadDefault();
+
+
+
+
+
+
 
 // end Detail
