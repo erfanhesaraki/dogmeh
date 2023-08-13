@@ -26,6 +26,20 @@ $(document).ready(function () {
     // End product-Right__Arrow
 });
 
+function formatNumbersWithCommas(number) {
+  const strNumber = number.toString();
+  const parts = [];
+console.log(parts);
+  for (let i = strNumber.length; i > 0; i -= 3) {
+    const max = Math.max(i - 3, 0);
+    console.log(max);
+    const slicedItem = strNumber.slice(max, i)
+    console.log(slicedItem);
+    parts.unshift(strNumber.slice(Math.max(i - 3, 0), i));
+  }
+  return parts.join(',');
+}
+
 console.log(jsonFile);
 
 // start Detail
