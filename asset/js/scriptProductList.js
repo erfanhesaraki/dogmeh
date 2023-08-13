@@ -29,7 +29,7 @@ $(document).ready(function () {
 function formatNumbersWithCommas(number) {
   const strNumber = number.toString();
   const parts = [];
-console.log(parts);
+
   for (let i = strNumber.length; i > 0; i -= 3) {
     const max = Math.max(i - 3, 0);
     console.log(max);
