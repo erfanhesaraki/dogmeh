@@ -4,11 +4,13 @@ $(document).ready(function () {
     // start CatNav__item__Arrow
 
     $(".CatNav__item__Arrow").click(function (e) {
-        e.preventDefault();
         let $subMenu = $(this).siblings(".CatNav__item__SubMenu");
         $subMenu.slideToggle("slow");
-        $subMenu.parent().toggleClass("active_menu");
-        $subMenu.css("display", "flex");
+        if ($subMenu.parent().hasClass("active_menu")) {
+            $subMenu.parent().removeClass("active_menu");
+          } else {
+            $subMenu.parent().addClass("active_menu");
+          }
     });
 
     // end CatNav__item__Arrow
@@ -16,38 +18,39 @@ $(document).ready(function () {
     // start  product-Right__Arrow
 
     $(".product-Right__Arrow").click(function (e) {
-        e.preventDefault();
         $(this).toggleClass("product-Right__ArrowTr");
         let $CatNav__mobile = $(".CatNav__mobile");
         $CatNav__mobile.slideToggle("slow");
-        $CatNav__mobile.toggleClass("d-flex");
+        if ($CatNav__mobile.hasClass("d-flex")) {
+            $CatNav__mobile.removeClass('d-flex');
+          } else {
+            $CatNav__mobile.addClass("active_menu");
+          }
+    
     });
 
     // End product-Right__Arrow
 });
 
 function formatNumbersWithCommas(number) {
-  const strNumber = number.toString();
-  const parts = [];
-console.log(parts);
-  for (let i = strNumber.length; i > 0; i -= 3) {
-    const max = Math.max(i - 3, 0);
-    console.log(max);
-    const slicedItem = strNumber.slice(max, i)
-    console.log(slicedItem);
-    parts.unshift(strNumber.slice(Math.max(i - 3, 0), i));
-  }
-  return parts.join(',');
+    const strNumber = number.toString();
+    const parts = [];
+    console.log(parts);
+    for (let i = strNumber.length; i > 0; i -= 3) {
+        const max = Math.max(i - 3, 0);
+        console.log(max);
+        const slicedItem = strNumber.slice(max, i);
+        console.log(slicedItem);
+        parts.unshift(strNumber.slice(Math.max(i - 3, 0), i));
+    }
+    return parts.join(",");
 }
+
 
 console.log(jsonFile);
 
 // start Detail
 
-// function loadDefaultImage() {
-//   $(".CenterImage").find("img").attr("src", "https://dogmehshop.com/" + __seletImg);
-// }
-// loadDefaultImage()
 
 $.each(jsonFile.Models, function (index, model) {
     let modelId = model.ModelId;
@@ -57,7 +60,7 @@ $.each(jsonFile.Models, function (index, model) {
     let QtyRemaining = model.QtyRemaining;
     let __DropModels = `
         <figure class="col-3 border DropModels_Image" data-id=${modelId} >
-            <img src="https://dogmehshop.com/${imageUrl}"   alt="imgGl" /  >
+            <img src="https://dogmehshop.com/${imageUrl}"   alt="imgGl"/>
         </figure>
     `;
     $(".DropModels").append(__DropModels);
@@ -75,8 +78,8 @@ $(".DropModels_Image").click(function () {
         .find("img")
         .attr("src", "https://dogmehshop.com/" + __seletImg);
 
-    let __selectPrice = selectedItem.UnitCost;
-    let __seletQtyRemaining = selectedItem.QtyRemaining;
+    let __selectPrice = selectedItem.UnitCost.toLocaleString();
+    let __seletQtyRemaining =selectedItem.QtyRemaining ;
 
     $(".Cat__price > p").text(__selectPrice);
 
@@ -94,14 +97,10 @@ function loadDefault() {
     let modelId = firstModel.ModelId;
     let modelName = firstModel.ModelName;
     let imageUrl = firstModel.ImageUrl;
-    let unitCost = firstModel.UnitCost;
+    let unitCost = firstModel.UnitCost.toLocaleString();
     let qtyRemaining = firstModel.QtyRemaining;
-
-    console.log("Model ID:", modelId);
-    console.log("Model Name:", modelName);
-    console.log("Image URL:", imageUrl);
-    console.log("Unit Cost:", unitCost);
-    console.log("Quantity Remaining:", qtyRemaining);
+    // console.log(+unitCost.replaceAll(',',""))
+    // unitCost = Number(unitCost.replaceAll(',',""));
 
     $(".CenterImage")
         .find("img")

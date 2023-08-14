@@ -15,7 +15,7 @@ $(document).ready(function () {
     $(".main__ShadowBox").css("transform", "translateX(0%)");
   });
 
-  $("#openMenu").click(function (e) {
+  $("#openMenu ").click(function (e) {
     $(".mainMenu").css("transform", "translateX(0%)");
   });
   $(".phone__CtgBtn").click(function (e) {
@@ -74,6 +74,7 @@ $(document).ready(function () {
     appendArrows: ".append__Slider_Arrow",
     appendDots: ".append__Slider_Dot",
     arrows: true,
+    rtl:true
   });
 
   $(".home__Product_List").slick({
